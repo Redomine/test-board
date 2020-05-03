@@ -7,8 +7,8 @@
   </head>
   <body>
     <main>
-      <nav>
-        <h1>Название темы</h1>
+      <h2>Сделай борду</h2>
+      <div class="post">
         <p>Завтра ищешь в интернете книжку Dive into python. Похуй если ничего не поймешь. Затем идешь на python.org и
           изучаешь стандартную библиотеку от корки до корки. Потом зубришь, именно, сука, вызубриваешь конвенцию по
           написанию питоньего кода - PEP8, чтобы от зубов отскакивало. Когда напишешь свою первую имиджборду, по пути
@@ -18,9 +18,24 @@
           MapReduce. Отсос хиккующих выблядков / просто неудачников типа рейфага или сисярп/джава-хуесосов, которые
           сосут хуй по жизни не заставит себя ждать и уже через пол года ты будешь получать такие суммы, что любая баба
           будет течь при одном упоминании твоей зарплаты.</p>
-      </nav>
-      <p>Введите текст ответа</p>
-      <input type="text" name="comment">
+      </div>
+      <h3>Комментарии</h3>
+      <div class="post">
+      <ol class="comment-list">
+        <li class="user-comment">Аноним сказал</li>
+        <li class="user-comment">Лучше убей себя…</li>
+        <li class="user-comment">Аноним сказал</li>
+        <li class="user-comment">Лучше убей себя…</li>
+        <li class="user-comment">Аноним сказал</li>
+        <li class="user-comment">Лучше убей себя…</li>
+      </ol>
+      </div>
+      <form class="comment-form">
+        <div class="comment-inner">
+          <input type="text" class="comment-field" value="" placeholder="Комментарий" required id="comment-input">
+        </div>
+        <button class="button" type="submit">Отправить</button>
+      </form>
     </main>
   </body>
 </html>
