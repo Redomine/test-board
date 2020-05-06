@@ -59,21 +59,11 @@ h3 {
   color: #6653d9;
 }
 
-.comments-space{
-  margin-top: 15px;
-  margin-left: 500px;
-  margin-right: 500px;
-  background-color: #FFF0F5;
-  box-shadow: 0 0 5px rgba(0,0,0,0.5);
-}
-
-
-
 .comment-list {
   margin-top: 0;
   margin-right: 0;
   margin-bottom: 12px;
-  margin-left: 500;
+  margin-left: 0;
   padding: 0;
   list-style: none;
   counter-reset: comments;
@@ -85,12 +75,11 @@ h3 {
   min-height: 36px;
   font-size: 14px;
   line-height: 24px;
-  background-color: #FFFFFF;
 }
 
 .comment-list .user-comment {
+  position: relative;
   display: flex;
-  margin-left: 500;
 }
 
 .comment-list .user-comment::before {
@@ -100,4 +89,7 @@ h3 {
   border-right: 1px solid;
   font-weight: bold;
 }
+
+
+
 

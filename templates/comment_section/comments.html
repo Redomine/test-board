@@ -3,7 +3,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="{% static "css/style.css" %}" type = "text/css" media="all">
+    <link rel="stylesheet" href="{% static "css/style.css" %}">
   </head>
   <body>
     <main>
@@ -20,22 +20,25 @@
           будет течь при одном упоминании твоей зарплаты.</p>
       </div>
       <h3>Комментарии</h3>
-      <div class="post">
-      <ol class="comment-list">
-        <li class="user-comment">Аноним сказал</li>
-        <li class="user-comment">Лучше убей себя…</li>
-        <li class="user-comment">Аноним сказал</li>
-        <li class="user-comment">Лучше убей себя…</li>
-        <li class="user-comment">Аноним сказал</li>
-        <li class="user-comment">Лучше убей себя…</li>
-      </ol>
+      <div class="comments-space">
+        <ol class="comment-list">
+
+          <li class="user-comment">Лучше убей себя…</li>
+
+          <li class="user-comment">Лучше убей себя…</li>
+
+          <li class="user-comment">Лучше убей себя…</li>
+        </ol>
       </div>
+
       <form class="comment-form">
         <div class="comment-inner">
           <input type="text" class="comment-field" value="" placeholder="Комментарий" required id="comment-input">
         </div>
         <button class="button" type="submit">Отправить</button>
       </form>
+
+      <script type="text/javascript" src={% static "js/send_comment.js" %}></script>
     </main>
   </body>
 </html>
