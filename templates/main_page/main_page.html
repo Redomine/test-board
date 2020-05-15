@@ -10,13 +10,14 @@
        <button class="theme_button" type="button">Создать тред</button>
 
 
-      <form class="post-form hide">
+      <form action = "{% url 'add_post' %}" method ="post" class="post-form hide">
+        {% csrf_token %}
         <button class="post-button" type="submit">Отправить</button>
         <div class="post-name">
-          <input type="text" class="post-name" value="" placeholder="тема" required id="post-name">
+          <input type="text" class="post-name" value="" placeholder="тема" required id="post-name" name = "post_name">
         </div>
         <div class="post-inner">
-           <p><textarea rows="10" cols="100" name="text" placeholder="Комментарий, макс. длина 15000 символов"></textarea> </p>
+           <p><textarea rows="10" cols="100" name="text" placeholder="Комментарий, макс. длина 15000 символов"></textarea> name = "post_content" </p>
         </div>
       </form>
 
