@@ -19,20 +19,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/templates/main_page/main_page.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="66" lean-forward="true" selection-start-line="12" selection-start-column="66" selection-end-line="12" selection-end-column="75" />
+            <state relative-caret-position="391">
+              <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/mainpage/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="374">
-              <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+            <state relative-caret-position="119">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -152,10 +152,10 @@
         <option value="$PROJECT_DIR$/Static/css/reserve_mainpage_style.css" />
         <option value="$PROJECT_DIR$/mainpage/models.py" />
         <option value="$PROJECT_DIR$/mainpage/urls.py" />
-        <option value="$PROJECT_DIR$/templates/main_page/main_page.html" />
         <option value="$PROJECT_DIR$/mainpage/migrations/forms.py" />
         <option value="$PROJECT_DIR$/mainpage/forms.py" />
         <option value="$PROJECT_DIR$/mainpage/views.py" />
+        <option value="$PROJECT_DIR$/templates/main_page/main_page.html" />
       </list>
     </option>
   </component>
@@ -451,13 +451,6 @@
     <entry file="file://$PROJECT_DIR$/mainpage/migrations/forms.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/main_page/main_page.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="66" lean-forward="true" selection-start-line="12" selection-start-column="66" selection-end-line="12" selection-end-column="75" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/mainpage/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
@@ -470,11 +463,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/mainpage/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="22" column="22" selection-start-line="22" selection-start-column="22" selection-end-line="22" selection-end-column="22" />
+        <state relative-caret-position="119">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
           <folding>
             <element signature="e#0#45#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/main_page/main_page.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
         </state>
       </provider>
     </entry>

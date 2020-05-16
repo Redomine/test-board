@@ -20,4 +20,6 @@ class AddPost(View):
         form = post_form(request.POST)
         if form.is_valid():
             form.save()
+        else:
+            print(form)
         return redirect("/")
