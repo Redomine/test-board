@@ -36,7 +36,10 @@ class AddPost(View):
         if form.is_valid():
             form.save()
 
+        treds = Post.objects.all()
         for tred in treds:
-            print(tred.url)
-        tred.url = new_url
+            if tred.url == "replace":
+                tred.url = new_url
+                tred.save()
+
         return redirect("/")
