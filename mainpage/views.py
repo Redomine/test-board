@@ -21,7 +21,7 @@ class show_main_page(View):
 
 class show_post(View):
     def get(self, request, key):
-        tred = Post.objects.get(url=key)
+        tred = Post.objects.get(id=key)
         return render(request, "comment_section/comments.html", {"tred": tred})
 
 
@@ -31,8 +31,5 @@ class AddPost(View):
         form = post_form(request.POST)
         if form.is_valid():
             form.save()
-
-        treds = Post.objects.all()
-
 
         return redirect("/")
