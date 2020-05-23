@@ -13,10 +13,10 @@ class show_main_page(ListView):
     template_name = "main_page/post_list.html"
 
 
-class show_post(View):
-    def get(self, request, key):
-        tred = Post.objects.get(id=key)
-        return render(request, "comment_section/comments.html", {"tred": tred})
+class show_post(DetailView):
+    def get(self, request, pk):
+        tred = Post.objects.get(id=pk)
+        return render(request, "main_page/post_detail.html", {"tred": tred})
 
 
 class AddPost(View):
