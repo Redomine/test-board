@@ -1,23 +1,17 @@
 from django.shortcuts import render, redirect
 from django.views.generic.base import View
+from django.views.generic import ListView, DetailView
 from django.http import HttpResponse
 from .models import Post
 from .forms import post_form
 
 
 
-def show(request):
-    return render(request, 'main_page/main_page.html')
+class show_main_page(ListView):
+    model = Post
+    queryset = Post.objects.all()
+    template_name = "main_page/post_list.html"
 
-
-
-
-
-
-class show_main_page(View):
-    def get(self, request):
-        treds = Post.objects.all()
-        return render(request, "main_page/main_page.html", {"tred_list": treds})
 
 class show_post(View):
     def get(self, request, key):

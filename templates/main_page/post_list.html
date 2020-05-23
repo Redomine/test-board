@@ -23,10 +23,10 @@
 
 
 
-      {% for tred in tred_list %}
+      {% for post in post_list %}
         <div class="post">
-          <p>  <a href="http://127.0.0.1:8000/{{  tred.id}}">{{  tred.post_name }} {{  tred.post_date }}</a> </p>
-          {{  tred.post_content }}
+          <p>  <a href="{{  post.id}}">{{  post.post_name }} {{  post.post_date }}</a> </p>
+          {{  post.post_content }}
         </div>
       {% endfor %}
 
