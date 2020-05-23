@@ -14,9 +14,9 @@ class show_main_page(ListView):
 
 
 class show_post(DetailView):
-    def get(self, request, pk):
-        tred = Post.objects.get(id=pk)
-        return render(request, "main_page/post_detail.html", {"tred": tred})
+    model = Post
+    template_name = "main_page/post_detail.html"
+
 
 
 class AddPost(View):
