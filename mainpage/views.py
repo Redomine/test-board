@@ -29,5 +29,9 @@ class AddPost(View):
 
 class AddComment(View):
     def post(self, request, pk):
-
+        form = comment_form(request.POST)
+        if form.is_valid():
+            form = form.save(commit=False)
+            form.tred_parent_id = pk
+            form.save()
         return redirect("/")

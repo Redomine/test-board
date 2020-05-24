@@ -27,7 +27,7 @@ class Post(models.Model):
 
 class Comment(models.Model):
 
-    parent_id = models.ForeignKey(Post, on_delete=models.CASCADE)
+    tred_parent = models.ForeignKey(Post, on_delete=models.CASCADE)
     comment_content = models.TextField("Тело комментария",  max_length = 15000)
     comment_date = models.DateField("Дата создания", default = datetime.datetime.utcnow().replace(tzinfo=utc))
 
