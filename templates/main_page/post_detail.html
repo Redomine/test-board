@@ -20,22 +20,17 @@
             <li class="user-comment">{{  comment.comment_content }}</li>
           {% endfor %}
 
-          <li class="user-comment">Лучше убей себя…</li>
-
-          <li class="user-comment">Лучше убей себя…</li>
-
-          <li class="user-comment">Лучше убей себя…</li>
         </ol>
       </div>
 
-      <form class="comment-form">
+      <form action = "{% url 'add_comment' post.id %}" method ="post" class="comment-form">
+        {% csrf_token %}
         <div class="comment-inner">
-          <input type="text" class="comment-field" value="" placeholder="Комментарий" required id="comment-input">
+          <input type="text" class="comment-field" value="" placeholder="Комментарий" name = "comment_content">
         </div>
         <button class="button" type="submit">Отправить</button>
       </form>
 
-      <script type="text/javascript" src={% static "js/send_comment.js" %}></script>
     </main>
   </body>
 </html>

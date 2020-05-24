@@ -4,6 +4,7 @@ from django.views.generic import ListView, DetailView
 from django.http import HttpResponse
 from .models import Post
 from .forms import post_form
+from .forms import comment_form
 
 
 
@@ -21,9 +22,12 @@ class show_post(DetailView):
 
 class AddPost(View):
     def post(self, request):
-
         form = post_form(request.POST)
         if form.is_valid():
             form.save()
+        return redirect("/")
+
+class AddComment(View):
+    def post(self, request, pk):
 
         return redirect("/")
