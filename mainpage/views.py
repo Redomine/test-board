@@ -34,4 +34,4 @@ class AddComment(View):
             form = form.save(commit=False)
             form.tred_parent_id = pk
             form.save()
-        return redirect("/")
+        return redirect("/"+str(pk))

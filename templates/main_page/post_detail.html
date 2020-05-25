@@ -3,7 +3,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="{% static "css/comments_style.css" %}">
+    <link rel="stylesheet" href="{% static "css/reserve_comments_style.css" %}">
   </head>
   <body>
     <main>
@@ -18,7 +18,8 @@
 
           {% for comment in post.comment_set.all %}
             <li class="user-comment">{{  comment.comment_content }}</li>
-          {% endfor %}
+            <button class="answer-button" type="button">Ответить</button>
+          {% endfor %} 
 
         </ol>
       </div>
