@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'testboard.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'board_data',
+        'NAME': 'board',
         'USER': 'root',
         'PASSWORD': '7M8Eh56d',
         'HOST': 'localhost',

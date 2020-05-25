@@ -5,20 +5,20 @@ from django.utils.timezone import utc
 from django.contrib.postgres.fields import ArrayField
 
 
-class Post(models.Model):
+class Tred(models.Model):
     def number():
-        no = Post.objects.count()
+        no = Tred.objects.count()
         if no == None:
             return 1
         else:
             return no + 1
 
-    post_name = models.CharField("Имя треда", max_length = 150)
-    post_content = models.TextField("Тело треда",  max_length = 15000)
-    post_date = models.DateTimeField("Дата создания", default = datetime.datetime.utcnow().replace(tzinfo=utc))
+    tred_name = models.CharField("Имя треда", max_length = 150)
+    tred_content = models.TextField("Тело треда",  max_length = 15000)
+    tred_date = models.DateTimeField("Дата создания", default = datetime.datetime.utcnow().replace(tzinfo=utc))
 
     def __str__(self):
-        return self.post_name
+        return self.tred_name
 
     class Meta:
         verbose_name = "Тред"
@@ -27,7 +27,7 @@ class Post(models.Model):
 
 class Comment(models.Model):
 
-    tred_parent = models.ForeignKey(Post, on_delete=models.CASCADE)
+    tred_parent = models.ForeignKey(Tred, on_delete=models.CASCADE)
     comment_content = models.TextField("Тело комментария",  max_length = 15000)
     comment_date = models.DateField("Дата создания", default = datetime.datetime.utcnow().replace(tzinfo=utc))
 
