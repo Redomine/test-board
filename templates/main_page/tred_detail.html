@@ -13,11 +13,11 @@
         <p>{{  tred.tred_content }}</p>
       </div>
       <h3>Комментарии</h3>
-      <div class="comments-space">
-        <ol class="comment-list">
+      <div class="comments-space" >
+        <ol class="comment-list" id="commentList">
 
           {% for comment in tred.comment_set.all %}
-            <li class="user-comment">{{  comment.comment_content }}</li>
+            <li   ="user-comment" id = {{  comment.full_path }}>{{  comment.comment_content }}</li>
             <button class="answer-button" type="button">Ответить</button>
           {% endfor %}
 
@@ -33,5 +33,6 @@
       </form>
 
     </main>
+      <script type="text/javascript" src={% static "js/sort_comments.js" %}></script>
   </body>
 </html>

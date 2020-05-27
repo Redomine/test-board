@@ -15,7 +15,7 @@ class Tred(models.Model):
 
     tred_name = models.CharField("Имя треда", max_length = 150)
     tred_content = models.TextField("Тело треда",  max_length = 15000)
-    tred_date = models.DateTimeField("Дата создания", default = datetime.datetime.utcnow().replace(tzinfo=utc))
+    tred_date = models.DateTimeField("Дата создания", default = timezone.now)
 
     def __str__(self):
         return self.tred_name
@@ -31,8 +31,9 @@ class Comment(models.Model):
     comment_parent = models.ForeignKey(
         'self', verbose_name="Родительский комментарий", on_delete=models.SET_NULL, blank=True, null=True
     )
+    full_path = models.TextField(verbose_name="Полный путь", blank=True, null=True)
     comment_content = models.TextField("Тело комментария",  max_length = 15000)
-    comment_date = models.DateField("Дата создания", default = datetime.datetime.utcnow().replace(tzinfo=utc))
+    comment_date = models.DateField("Дата создания", default = timezone.now)
 
     def __str__(self):
         return self.comment_content[0:200]
