@@ -77,27 +77,10 @@ h3 {
     padding: 0;
     list-style: none;
     counter-reset: comments;
-}
-
-.comment-list li {
-    margin-bottom: 6px;
-    padding: 10px 12px;
-    min-height: 36px;
-    font-size: 14px;
-    line-height: 24px;
     background-color: #FFFFFF;
 }
 
-.comment-list .user-comment {
-    display: flex;
-    margin-left: 500;
-}
-
-.comment-list .user-comment::before {
-    content: "Аноним";
-    padding-right: 12px;
-    margin-right: 12px;
-    border-right: 1px solid;
-    font-weight: bold;
+.comment-list li {
+    margin-left: 5px;
 }
 

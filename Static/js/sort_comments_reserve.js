@@ -9,13 +9,13 @@ for (var i in items) {
     }
 }
 
-
+console.log(itemsArr);
 
 itemsArr.sort(function(a, b) {
     return a.id == b.id ? 0 : (a.id > b.id ? 1 : -1);
-
 });
 
 for (i = 0; i < itemsArr.length; ++i) {
     list.appendChild(itemsArr[i]);
 }
+
