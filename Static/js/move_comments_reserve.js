@@ -12,6 +12,7 @@ for (var i in items) {
 
 itemsArr.forEach(item =>
 
-    console.log(item.attributes.id.nodeValue)
+    console.log(item.attributes.id.nodeValue);
+    let x = (typeof(item.attributes.id.nodeValue));
 
     );

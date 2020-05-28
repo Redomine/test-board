@@ -3,7 +3,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="{% static "css/comments_style.css" %}">
+    <link rel="stylesheet" href="{% static "css/reserve_comments_style.css" %}">
   </head>
   <body>
     <main>
@@ -13,7 +13,7 @@
         <p>{{  tred.tred_content }}</p>
       </div>
       <h3>Комментарии</h3>
-      <div class="comments-space" >
+      <div class="comments-space hide" >
         <ol class="comment-list" id="commentList">
           {% for comment in tred.comment_set.all %}
             <li class="user-comment" id = {{  comment.full_path }}>
@@ -36,6 +36,6 @@
 
     </main>
       <script type="text/javascript" src={% static "js/sort_comments.js" %}></script>
-      <script type="text/javascript" src={% static "js/move_comments_reserve.js" %}></script>
+      <script type="text/javascript" src={% static "js/move_comments.js" %}></script>
   </body>
 </html>
