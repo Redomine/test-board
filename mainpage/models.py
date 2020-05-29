@@ -33,7 +33,7 @@ class Comment(models.Model):
     )
     full_path = models.TextField(verbose_name="Полный путь", blank=True, null=True)
     comment_content = models.TextField("Тело комментария",  max_length = 15000)
-    comment_date = models.DateField("Дата создания", default = timezone.now)
+    comment_date = models.DateTimeField("Дата создания", default = timezone.now)
 
     def __str__(self):
         return self.comment_content[0:200]

@@ -3,11 +3,28 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="{% static "css/reserve_comments_style.css" %}">
+    <link rel="stylesheet" href="{% static "css/comments.css" %}">
   </head>
   <body>
     <main>
       <p>  <a href="/"> На главную </a> </p>
+
+      <div class="b-popup">
+        <div class="b-popup-content">
+          <p> Ответить в тред </p>
+          <form action = "{% url 'add_comment' tred.id %}" method ="post" class="comment-form" id="formComment">
+            {% csrf_token %}
+            <input type="hidden" name ="parent" id="commentparent" value="">
+              <div class="comment-inner">
+
+
+                <p><textarea rows="10" cols="35" placeholder="Комментарий" name = "comment_content" ></textarea> </p>
+              </div>
+              <button class="button" type="submit">Отправить</button>
+          </form>
+        </div>
+      </div>
+
       <h2>{{  tred.tred_name }}</h2>
       <div class="post">
         <p>{{  tred.tred_content }}</p>
@@ -19,22 +36,17 @@
             <li class="user-comment" id = {{  comment.full_path }}>
               <p> {{  comment.comment_date }} </p>
               <p> {{  comment.comment_content }} </p>
-              <button class="answer-button" type="button">Ответить</button>
+              <a href="#formComment" onclick="addComment('{{ comment.full_path }}')">Ответить</a>
             </li>
           {% endfor %}
 
         </ol>
       </div>
 
-      <form action = "{% url 'add_comment' tred.id %}" method ="post" class="comment-form">
-        {% csrf_token %}
-        <div class="comment-inner">
-          <input type="text" class="comment-field" value="" placeholder="Комментарий" name = "comment_content">
-        </div>
-        <button class="button" type="submit">Отправить</button>
-      </form>
+
 
     </main>
+
       <script type="text/javascript" src={% static "js/sort_comments.js" %}></script>
       <script type="text/javascript" src={% static "js/move_comments.js" %}></script>
   </body>
